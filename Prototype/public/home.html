@@ -1,0 +1,84 @@
+<main role="main" class="container">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+        <table class="table table-responsive">
+            <tr>
+                <th class="bold">Linha</th>
+                <th class="bold">Estado</th>
+            </tr>
+            <tr>
+                <td>Azul</td>
+                <td id="azul">Carregando</td>
+            </tr>
+            <tr>
+                <td>Vermelha</td>
+                <td id="verde">Carregando</td>
+            </tr>
+            <tr>
+                <td>Turquesa</td>
+                <td id="vermelha">Carregando</td>
+            </tr>
+            <tr>
+                <td>Amarela</td>
+                <td id="amarela">Carregando</td>
+            </tr>
+            <tr>
+                <td>Lilás</td>
+                <td id="lilas">Carregando</td>
+            </tr>
+            <tr>
+                <td>Rubi</td>
+                <td id="rubi">Carregando</td>
+            </tr>
+            <tr>
+                <td>Diamante</td>
+                <td id="diamante">Carregando</td>
+            </tr>
+            <tr>
+                <td>Esmeralda</td>
+                <td id="esmeralda">Carregando</td>
+            </tr>
+            <tr>
+                <td>Turquesa</td>
+                <td id="turquesa">Carregando</td>
+            </tr>
+            <tr>
+                <td>Coral</td>
+                <td id="coral">Carregando</td>
+            </tr>
+            <tr>
+                <td>Safira</td>
+                <td id="safira">Carregando</td>
+            </tr>
+            <tr>
+                <td>Jade</td>
+                <td id="jade">Carregando</td>
+            </tr>
+            <tr>
+                <td>Prata</td>
+                <td id="prata">Carregando</td>
+            </tr>
+        </table>
+        </div>
+        
+        <div class="col-auto">
+            <form action="#!answer">
+                <div class="input-box">
+                    <p>Estação em que estou:</p>
+                    <input autocomplete="true" placeholder="Estação de Entrada" list="stationsCurrent">
+                    <datalist id="stationsCurrent">
+                </datalist>
+                </div>
+                <div class="input-box">
+                    <p>Estação em que quero sair:</p>
+                    <input autocomplete="true" placeholder="Estação de Saída" list="stationsNext">
+                    <datalist id="stationsNext">
+                    </datalist>
+                </div>
+                <div class="row justify-content-center">
+                    <input class="btn btn-primary gray" type="submit" value="Verificar caminho">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

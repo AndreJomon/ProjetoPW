@@ -47,6 +47,14 @@ tr, th, td {
     background-color: gray;
 }
 
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box p {
+    margin-bottom: 0px;
+}
+
 .station-input {
     margin-top: 20px;
 }
