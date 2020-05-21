@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const lineStatus = require('./lineStatus.js');
+const stationList = require('./stationList.js');
 
 let app = express();
 
@@ -15,6 +16,10 @@ app.use(express.static(STATIC_DIR));
 
 app.get('/lines.json', (req, res) => {
     lineStatus().then(data => res.json(data));
+});
+
+app.get('/stations.json', (req, res) => {
+    stationList().then(data => res.json(data));
 });
 
 app.get('*', function(req, res) {
