@@ -7,9 +7,7 @@ $(function() {
 
 function UpdateLineStatus() {
 
-    fetch("https://cors-anywhere.herokuapp.com/http://apps.cptm.sp.gov.br:8080/AppMobileService/api/LinhasMetropolitanasAppv3?versao=4").then(function (response) {
-        return response.json();
-    }).then(function (json) {
+    $.getJSON('http://localhost:3000/lines.json', (json) => {
         $("#azul").text(json[0].Status);
         $("#verde").text(json[1].Status);
         $("#vermelha").text(json[2].Status);
@@ -23,7 +21,6 @@ function UpdateLineStatus() {
         $("#safira").text(json[10].Status);
         $("#jade").text(json[11].Status);
         $("#prata").text(json[12].Status);
-        console.log(json);
     });
 }
 
