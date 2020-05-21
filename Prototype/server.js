@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
 const lineStatus = require('./lineStatus.js');
 
 let app = express();
@@ -15,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(STATIC_DIR));
 
 app.get('/lines.json', (req, res) => {
-    res.json(lineStatus());
+    lineStatus().then(data => res.json(data));
 });
 
 app.get('*', function(req, res) {
