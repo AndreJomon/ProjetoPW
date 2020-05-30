@@ -65,20 +65,22 @@
             <form action="#!answer">
                 <div class="input-box">
                     <p>Estação em que estou:</p>
-                    <input autocomplete="true" placeholder="Estação de Entrada" list="stationsCurrent">
+                    <input autocomplete="true" id="origin" placeholder="Estação de Entrada" list="stationsCurrent">
                     <datalist id="stationsCurrent">
                 </datalist>
                 </div>
                 <div class="input-box">
                     <p>Estação em que quero sair:</p>
-                    <input autocomplete="true" placeholder="Estação de Saída" list="stationsNext">
+                    <input autocomplete="true" id="destination" placeholder="Estação de Saída" list="stationsNext">
                     <datalist id="stationsNext">
                     </datalist>
                 </div>
                 <div class="row justify-content-center">
-                    <input class="btn btn-primary gray" type="submit" value="Verificar caminho">
+                    <input id="search-button" class="btn btn-primary gray" type="submit" value="Verificar caminho">
                 </div>
             </form>
         </div>
     </div>
+    <script src="js/organizeStatus.js"></script>
+    <script src="js/inputManager.js"></script>
 </main>

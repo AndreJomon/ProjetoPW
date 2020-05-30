@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const lineStatus = require('./lineStatus.js');
 const stationList = require('./stationList.js');
+const secrets = require('./secrets.json')
 
 let app = express();
 
@@ -20,6 +21,11 @@ app.get('/lines.json', (req, res) => {
 
 app.get('/stations.json', (req, res) => {
     stationList().then(data => res.json(data));
+});
+
+app.get('/secrets.json', (req, res) => {
+    console.log(secrets);
+    res.json(secrets);
 });
 
 app.get('*', function(req, res) {

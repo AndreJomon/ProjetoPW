@@ -9,5 +9,9 @@ app.config(function($routeProvider) {
   
   .when("/answer", {
     templateUrl : 'answer.html'
+  })
+  
+  .when("/error", {
+    templateUrl: 'error.html'
   });
 }); 

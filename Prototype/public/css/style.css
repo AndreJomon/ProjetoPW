@@ -6,7 +6,8 @@ table {
 body {
     background-color: rgb(212, 212, 212);
     position: relative;
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
     background-color: rgb(141, 141, 141);
 }
 
-main.container {
+main {
     padding-bottom: 70px;
 }
 
@@ -25,6 +26,10 @@ main.container {
     bottom: 0;
     width: 100%;
     height: 60px;   
+}
+
+.title {
+    font-weight: bold;
 }
 
 .table-responsive {
@@ -66,4 +71,17 @@ tr, th, td {
 
 .bold {
     font-weight: bold;
+}
+
+#map {
+    width: 50%;
+    height: 300px;
+    border: solid;
+    border-color: black;
+}
+
+#routeList ol {
+    display: list-item;
+    list-style-position: inside;
+    list-style: decimal;
 }
