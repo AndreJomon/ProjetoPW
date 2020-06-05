@@ -1,12 +1,22 @@
 $.getJSON('http://localhost:3000/secrets.json', (data) => {
+    let googleMapsInstatiate
 
-    mapsKey = data.mapsKey;
+    if (!googleMapsInstatiate) {
 
-    // Create the script tag, set the appropriate attributes
-    var script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${mapsKey}&callback=initMap`;
-    script.defer = true;
-    script.async = true;
+        console.log("entrou");
+
+        mapsKey = data.mapsKey;
+    
+        // Create the script tag, set the appropriate attributes
+        var script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${mapsKey}&callback=initMap`;
+        script.defer = true;
+        script.async = true;
+
+        googleMapsInstatiate = true;
+        // Append the 'script' element to 'head'
+        document.head.appendChild(script);
+    }
 
     // Attach your callback function to the `window` object
     window.initMap = function() {
@@ -23,8 +33,6 @@ $.getJSON('http://localhost:3000/secrets.json', (data) => {
     };
 
     
-    // Append the 'script' element to 'head'
-    document.head.appendChild(script);
     
 });
 /// Input the route on map

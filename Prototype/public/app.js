@@ -13,5 +13,8 @@ app.config(function($routeProvider) {
   
   .when("/error", {
     templateUrl: 'error.html'
+  })
+  .otherwise({
+    redirectTo: '/error'
   });
 }); 

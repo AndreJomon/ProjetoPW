@@ -14,6 +14,8 @@ header {
     text-align: center;
     padding: 5px;
     background-color: rgb(141, 141, 141);
+    border-bottom: solid;
+    border-color: darkslategrey;
 }
 
 main {
@@ -25,11 +27,28 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;   
+    height: 60px; 
+    border-top: solid;
+    border-color: darkslategrey;  
+}
+
+.blank-spot {
+    border: solid;
+    border-color: red;
+}
+
+#warning {
+    text-align: center;
+    color: red;
 }
 
 .title {
     font-weight: bold;
+    margin-right: 5px;
+}
+
+table {
+    text-align: center;
 }
 
 .table-responsive {
@@ -40,16 +59,28 @@ tr, th, td {
     border: solid;
 }
 
+tr th {
+    background-color: gray;
+}
+
+.normal-operation {
+    background-color: darkseagreen;
+}
+
+.parcial-operation {
+    background-color: gold;
+}
+
+.no-operation {
+    background-color: indianred;
+}
+
 .table td, .table th {
     padding: .35rem;
 }
 
 .row {
     padding-top: 10px;
-}
-
-.gray {
-    background-color: gray;
 }
 
 .input-box {

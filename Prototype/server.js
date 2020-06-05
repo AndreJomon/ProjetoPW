@@ -24,7 +24,6 @@ app.get('/stations.json', (req, res) => {
 });
 
 app.get('/secrets.json', (req, res) => {
-    console.log(secrets);
     res.json(secrets);
 });
 

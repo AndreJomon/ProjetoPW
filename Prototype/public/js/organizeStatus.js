@@ -7,21 +7,28 @@ $(function() {
 
 function UpdateLineStatus() {
 
+    let lines = ["azul", "verde", "vermelha", "amarela", "lilas", "rubi", "diamante", "esmeralda", "turquesa", "coral", "safira", "jade", "prata"];
+
     $.getJSON('http://localhost:3000/lines.json', (json) => {
-        $("#azul").text(json[0].Status);
-        $("#verde").text(json[1].Status);
-        $("#vermelha").text(json[2].Status);
-        $("#amarela").text(json[3].Status);
-        $("#lilas").text(json[4].Status);
-        $("#rubi").text(json[5].Status);
-        $("#diamante").text(json[6].Status);
-        $("#esmeralda").text(json[7].Status);
-        $("#turquesa").text(json[8].Status);
-        $("#coral").text(json[9].Status);
-        $("#safira").text(json[10].Status);
-        $("#jade").text(json[11].Status);
-        $("#prata").text(json[12].Status);
+
+        for (let i = 0; i < lines.length; i++) {
+            putInTable(lines[i], json[i].Status);
+        }
     });
+}
+
+function putInTable (lineName, statusText) {
+    lineName = `#${lineName}`;
+
+    $(lineName).text(statusText);
+    
+    if (statusText == "Operação Normal") {
+        $(lineName).parent().addClass("normal-operation");
+    } else if (statusText == "Operação Parcial") {
+        $(lineName).parent().addClass("parcial-operation");
+    } else {
+        $(lineName).parent().addClass("no-operation");
+    }
 }
 
 function UpdateStationList() {
