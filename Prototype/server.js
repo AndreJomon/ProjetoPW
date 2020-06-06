@@ -28,7 +28,7 @@ app.get('/secrets.json', (req, res) => {
 });
 
 app.get('*', function(req, res) {
-    res.sendFile(path.join(STATIC_DIR, 'index.html'));
+    res.sendFile(path.join(STATIC_DIR, 'template.html'));
 });
 
 app.listen(3000, () => {

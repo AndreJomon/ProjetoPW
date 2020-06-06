@@ -46,7 +46,6 @@ function calcRoute(directionsRenderer, directionsService) {
         return;
     } else {
         
-        console.log(`A origem é ${origin} e o destino é ${destination}`);
         let request = {
             origin: origin,
             destination: destination,
